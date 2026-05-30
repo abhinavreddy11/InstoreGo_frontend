@@ -3,7 +3,7 @@ import axios from 'axios';
 const api = axios.create({
   // Uses proxy in development (package.json "proxy" field → http://localhost:8080)
   // Uses REACT_APP_API_URL in production (set in .env.production)
-  baseURL: process.env.REACT_APP_API_URL || '/api',
+  baseURL: process.env.REACT_APP_API_URL || '',
 });
 
 // Automatically attach JWT token to every request
