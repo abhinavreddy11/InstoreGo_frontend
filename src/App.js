@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
-import ProtectedRoute from './components/ProtectedRoute';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Dashboard from './pages/Dashboard';
+import Login from './pages/Login/Login';
+import Register from './pages/Register/Register';
+import ForgotPassword from './pages/ForgotPassword/ForgotPassword';
+import Finbric from './pages/Finbric/finbric';
 
 function App() {
   return (
@@ -12,17 +12,10 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route
-            path="/dashboard"
-            element={
-              <ProtectedRoute>
-                <Dashboard />
-              </ProtectedRoute>
-            }
-          />
-          {/* Redirect root to dashboard (or login if not authenticated) */}
-
-          <Route path="*" element={<Navigate to="/dashboard" replace />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/finbric" element={<Finbric />} />
+          <Route path="/" element={<Navigate to="/finbric" replace />} />
+          <Route path="*" element={<Navigate to="/finbric" replace />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/InstoreGo_frontend.iml" filepath="$PROJECT_DIR$/.idea/InstoreGo_frontend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Finbric_frontend.iml" filepath="$PROJECT_DIR$/.idea/Finbric_frontend.iml" />
     </modules>
   </component>
 </project>
